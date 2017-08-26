@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    public Vector3 startingPosition = new Vector3(-10f, -2.5f);
+
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;
     public float gravity = 10.0f;
     public float jumpHeight = 3.0f;
     public float floatTime = 1.0f;
+
+    public KeyCode jumpKey = KeyCode.Space;
 
     private float velocityX = 0;
     private float velocityY = 0;
@@ -19,7 +23,7 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        transform.position = startingPosition;
 	}
 	
 	// Update is called once per frame
@@ -34,7 +38,7 @@ public class Player : MonoBehaviour {
         transform.position += Vector3.right * velocityX * Time.deltaTime;
 
         //jump
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(jumpKey))
         {
             if(!jumping)
             {
@@ -49,9 +53,9 @@ public class Player : MonoBehaviour {
             velocityY += gravity * Time.deltaTime;
             transform.position -= Vector3.up * velocityY * Time.deltaTime;
 
-            if(transform.position.y < startingHeight)
+            if(transform.position.y < startingPosition.y)
             {
-                transform.position = new Vector3(transform.position.x, startingHeight, transform.position.z);
+                transform.position = new Vector3(transform.position.x, startingPosition.y, transform.position.z);
                 jumping = false;
             }
         }
@@ -81,6 +85,21 @@ public class Player : MonoBehaviour {
             if (jumping)
             {
                 jumping = false;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("collision exit!");
+
+        if (collision.gameObject.tag == "platform")
+        {
+            if (transform.position.y > startingPosition.y && !jumping)
+            {
+                velocityY = 5.0f;
+                jumping = true;
+                //Debug.Log("Y velocity: " + velocityY);
             }
         }
     }

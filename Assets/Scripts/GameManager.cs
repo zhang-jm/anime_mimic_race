@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager _instance;
+
     public static GameManager Instance
     {
         get
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public int playerCount;
+
     void Awake() {
         _instance = this;
         DontDestroyOnLoad(gameObject);
@@ -26,5 +29,15 @@ public class GameManager : MonoBehaviour {
     private void Start()
     {
         //what to do when game starts
+    }
+
+    public void SetPlayerCount(int players)
+    {
+        playerCount = players;
+        Debug.Log("There are " + playerCount + " active players");
+    }
+
+    public int GetPlayerCount() {
+        return playerCount;
     }
 }

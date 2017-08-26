@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrapManager : MonoBehaviour
 {
+    public GameObject bearTrap;
+
     private static TrapManager instance = null;
 
     List<PlaceableObject> possibleTrapList;
@@ -40,11 +42,11 @@ public class TrapManager : MonoBehaviour
 
     private void addTraps()
     {
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds."));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds."));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds."));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds."));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds."));
+        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap));
+        possibleTrapList.Add(new PlaceableObject("Toast", "Gives a 1 second speed boost for the first player to pick it up.", bearTrap));
+        possibleTrapList.Add(new PlaceableObject("Poison Toast", "Slows down any player who steps on this trap for 3 seconds.", bearTrap));
+        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap));
+        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap));
     }
 
     public List<PlaceableObject> getTrapsToShow()

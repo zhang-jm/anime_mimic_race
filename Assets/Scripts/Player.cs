@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("collision detected!");
+        //Debug.Log("collision detected!");
 
         if (other.gameObject.tag == "platform")
         {
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger detected!");
+        //Debug.Log("trigger detected!");
 
         if (other.gameObject.tag == "platform")
         {
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("collision exit!");
+       // Debug.Log("collision exit!");
 
         if (collision.gameObject.tag == "platform")
         {

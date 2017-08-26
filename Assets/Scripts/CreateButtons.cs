@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class CreateButtons : MonoBehaviour {
 
     public GameObject button;
+    public TrapManager trapManager;
 
     private List<GameObject> buttons = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
+        //List<PlaceableObject> traps = trapManager.getTrapsToShow();
+
 		for(int i = 0; i < 5; i++)
         {
             Debug.Log("asdf");

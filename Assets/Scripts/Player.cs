@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;
-    public float gravity = 1.0f;
+    public float gravity = 10.0f;
     public float jumpHeight = 3.0f;
     public float floatTime = 1.0f;
 
@@ -56,10 +56,10 @@ public class Player : MonoBehaviour {
             }
         }
 
-        //Debug.Log("Y value: " + transform.position.y);
+        //Debug.Log("Y velocity: " + velocityY);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter(Collision other)
     {
         Debug.Log("collision detected!");
 
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("trigger detected!");
 

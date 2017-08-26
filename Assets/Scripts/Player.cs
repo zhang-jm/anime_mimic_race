@@ -9,8 +9,8 @@ public class Player : MonoBehaviour {
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;
     public float gravity = 10.0f;
-    public float jumpHeight = 3.0f;
-    public float floatTime = 1.0f;
+
+    public float trapStopAmtTime = 3.0f;
 
     public KeyCode jumpKey = KeyCode.Space;
 
@@ -18,8 +18,17 @@ public class Player : MonoBehaviour {
     private float velocityY = 0;
     private float startingHeight = 0;
     private float timeFloated = 0;
+    private float statusCounter = 0;
 
     private bool jumping = false;
+    private Status status = Status.normal;
+
+    public enum Status
+    {
+        normal,
+        slowed,
+        stopped
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +37,19 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       if(velocityX < maxVelocity) //set max running speed
+        if(status == Status.stopped)
+        {
+            statusCounter += Time.deltaTime;
+            if(statusCounter >= trapStopAmtTime)
+            {
+                statusCounter = 0;
+                status = Status.normal;
+            }
+
+            return;
+        }
+
+        if(velocityX < maxVelocity) //set max running speed
         {
             //v1 = v0 + at
             velocityX += acceleration * Time.deltaTime;
@@ -86,6 +107,11 @@ public class Player : MonoBehaviour {
             {
                 jumping = false;
             }
+        } else if (other.gameObject.tag == "stopping_trap")
+        {
+            transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, transform.position.z);
+            status = Status.stopped;
+            velocityX = 0;
         }
     }
 

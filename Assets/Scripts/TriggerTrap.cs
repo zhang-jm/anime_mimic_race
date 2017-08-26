@@ -6,6 +6,9 @@ public class TriggerTrap : MonoBehaviour {
 
     Animator anim;
 
+    private bool triggered = false;
+    private float triggeredCounter = 0;
+
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -13,15 +16,26 @@ public class TriggerTrap : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (triggered)
+        {
+            triggeredCounter += Time.deltaTime;
+            if (triggeredCounter > 2.5)
+            {
+                anim.SetTrigger("ResetTrap");
+                triggered = false;
+                triggeredCounter = 0;
+            }
+        }
 	}
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        anim.SetTrigger("TrapTriggered");
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         anim.SetTrigger("TrapTriggered");
+        triggered = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 }

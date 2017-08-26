@@ -18,7 +18,7 @@ public class TrapDescription : MonoBehaviour {
         thisUi = Instantiate(ui, Vector3.zero, Quaternion.identity);
         thisUi.gameObject.SetActive(false);
         thisUi.transform.SetParent(transform);
-        thisUi.transform.position = new Vector3(this.transform.parent.position.x, 300, 0);
+        thisUi.transform.position = new Vector3(transform.position.x, transform.position.y - 100, 0);
 
         Text name = thisUi.transform.GetChild(0).GetComponent<Text>();
         name.text = trap.getName();

@@ -22,4 +22,9 @@ public class GameManager : MonoBehaviour {
         _instance = this;
         DontDestroyOnLoad(gameObject);
 	}
+
+    private void Start()
+    {
+        //what to do when game starts
+    }
 }

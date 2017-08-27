@@ -21,6 +21,12 @@ public class ObjectPlacer : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
+
         Debug.Log("clicked");
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
@@ -34,5 +40,14 @@ public class ObjectPlacer : MonoBehaviour {
 
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         transform.position = curPosition;
+    }
+
+    private void OnMouseUp()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if(rb != null)
+        {
+            rb.isKinematic = false;
+        }
     }
 }

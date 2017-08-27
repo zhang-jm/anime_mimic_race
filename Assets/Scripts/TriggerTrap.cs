@@ -30,8 +30,11 @@ public class TriggerTrap : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        anim.SetTrigger("TrapTriggered");
-        triggered = true;
+        if(other.gameObject.tag == "Player")
+        {
+            anim.SetTrigger("TrapTriggered");
+            triggered = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)

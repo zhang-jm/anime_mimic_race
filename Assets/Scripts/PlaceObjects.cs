@@ -15,10 +15,8 @@ public class PlaceObjects : MonoBehaviour {
 
         foreach (GameObject obj in placedObjects)
         {
-            Destroy(obj.GetComponent<ObjectPlacer>());
             Destroy(obj.GetComponent<Rigidbody>());
 
-            obj.GetComponent<Collider>().isTrigger = true;
             obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, 1.0f);
         }
 	}

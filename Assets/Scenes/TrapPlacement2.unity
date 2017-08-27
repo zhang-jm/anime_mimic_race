@@ -1363,7 +1363,7 @@ MonoBehaviour:
   playerText2: {fileID: 687848015}
   startPlacement: {fileID: 1544083310}
   trapPlacementUI: {fileID: 503699045}
-  countdown: 5
+  countdown: 30
 --- !u!4 &1637477628
 Transform:
   m_ObjectHideFlags: 0

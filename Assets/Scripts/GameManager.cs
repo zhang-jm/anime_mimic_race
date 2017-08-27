@@ -20,7 +20,9 @@ public class GameManager : MonoBehaviour {
     }
 
     public int playerCount;
+    public GameObject player;
     public List<GameObject> placedTraps;
+    public List<GameObject> players;
 
     void Awake() {
         _instance = this;
@@ -46,4 +48,6 @@ public class GameManager : MonoBehaviour {
     {
         placedTraps.Add(trap);
     }
+
+   
 }

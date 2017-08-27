@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrapManager : MonoBehaviour
 {
     public GameObject bearTrap;
+    public GameObject staticBearTrap;
     public Sprite bearTrapSprite;
 
     private static TrapManager instance = null;
@@ -43,11 +44,11 @@ public class TrapManager : MonoBehaviour
 
     private void addTraps()
     {
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
-        possibleTrapList.Add(new PlaceableObject("Toast", "Gives a 1 second speed boost for the first player to pick it up.", bearTrap, bearTrapSprite));
-        possibleTrapList.Add(new PlaceableObject("Poison Toast", "Slows down any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, staticBearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Toast", "Gives a 1 second speed boost for the first player to pick it up.", bearTrap, staticBearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Poison Toast", "Slows down any player who steps on this trap for 3 seconds.", bearTrap, staticBearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, staticBearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, staticBearTrap, bearTrapSprite));
     }
 
     public List<PlaceableObject> getTrapsToShow()

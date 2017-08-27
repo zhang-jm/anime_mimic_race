@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d82a39a13cbf55f428aae122b3ae0593
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Trap Placement Test.unity
     guid: 894957d6e33758146815143edb4c1f3a
+  - enabled: 1
+    path: Assets/Scenes/TrapPlacement2.unity
+    guid: a8d2dfd1cd362ef4a923c2785fb8500b
+  - enabled: 1
+    path: Assets/Scenes/LevelTest.unity
+    guid: 00000000000000000000000000000000

@@ -145,22 +145,17 @@ public class TrapEffectResolver : MonoBehaviour {
 
     private void setUpCanvas(Trap.TrapType trapType)
     {
-        GameObject p1 = null;
-        GameObject p2 = null;
-        GameObject p3 = null;
-        GameObject p4 = null;
+        canvasToShow.transform.Find("P1/Text").gameObject.GetComponent<Text>().text = "Player 1";
+        canvasToShow.transform.Find("P2/Text").gameObject.GetComponent<Text>().text = "Player 2";
 
-        p1 = canvasToShow.transform.Find("P1").gameObject;
-        p2 = canvasToShow.transform.Find("P2").gameObject;
-
-        if(canvasToShow.transform.Find("P3") != null)
+        if (canvasToShow.transform.Find("P3") != null)
         {
-            p3 = canvasToShow.transform.Find("P3").gameObject;
+           canvasToShow.transform.Find("P3/Text").gameObject.GetComponent<Text>().text = "Player 3";
         }
 
         if(canvasToShow.transform.Find("P4") != null)
         {
-            p4 = canvasToShow.transform.Find("P4").gameObject;
+            canvasToShow.transform.Find("P4/Text").gameObject.GetComponent<Text>().text = "Player 4";
         }
 
         temp = new GameObject();

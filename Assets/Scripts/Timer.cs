@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
     public Text timerText;
 
-    private float countdown;
+    public float countdown = 30.0f;
 
 	// Use this for initialization
 	void Start () {
-        countdown = 30.0f;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour {
         if(countdown <= 0.0f)
         {
             timerText.text = "Time up!";
+            SceneManager.LoadScene(2);
         }
 	}
 }

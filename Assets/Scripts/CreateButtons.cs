@@ -12,8 +12,6 @@ public class CreateButtons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //List<PlaceableObject> traps = trapManager.getTrapsToShow();
-
 		for(int i = 0; i < 5; i++)
         {
             GameObject b = Instantiate(button, Vector3.zero, Quaternion.identity);

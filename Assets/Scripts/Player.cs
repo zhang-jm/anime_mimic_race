@@ -123,7 +123,7 @@ public class Player : MonoBehaviour {
             }*/
         }
         
-        Debug.Log("Y velocity: " + velocityY);
+        //Debug.Log("Y velocity: " + velocityY);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -131,6 +131,7 @@ public class Player : MonoBehaviour {
 
         if (other.gameObject.tag == "platform")
         {
+            Debug.Log("platform colision");
             if (jumping)
             {
                 controller.SetBool("jumping", false);

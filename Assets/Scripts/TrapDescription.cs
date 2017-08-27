@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TrapDescription : MonoBehaviour {
+    private GameManager gm;
 
     public GameObject ui;
     public TrapManager trapManager;
 
     private GameObject thisUi;
-    private GameObject trapIcon;
+    private PlaceableObject trap;
     private GameObject spawnedObj;
 
     Vector3 screenPoint;
@@ -17,8 +18,9 @@ public class TrapDescription : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        gm = GameManager.Instance;
         trapManager = TrapManager.getInstance();
-        PlaceableObject trap = trapManager.returnRandomTrap();
+        trap = trapManager.returnRandomTrap();
 
         Image i = GetComponent<Image>();
         i.sprite = trap.getSprite();
@@ -33,10 +35,6 @@ public class TrapDescription : MonoBehaviour {
 
         Text desc = thisUi.transform.GetChild(1).GetComponent<Text>();
         desc.text = trap.getDesc();
-
-        trapIcon = Instantiate(trap.getPrefab(), Vector3.zero, Quaternion.identity);
-        trapIcon.transform.SetParent(transform);
-        trapIcon.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 	
 	// Update is called once per frame
@@ -56,11 +54,13 @@ public class TrapDescription : MonoBehaviour {
 
     public void spawnObject()
     {
-        spawnedObj = Instantiate(trapIcon);
+        spawnedObj = Instantiate(trap.getPrefab(), Vector3.zero, Quaternion.identity); 
         spawnedObj.transform.localScale = new Vector3(1, 1, 1);
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
         spawnedObj.transform.position = new Vector3(curPosition.x, curPosition.y - 3, 1);
+
+        gm.addTrap(spawnedObj);
     }
 
     public void dragObject()

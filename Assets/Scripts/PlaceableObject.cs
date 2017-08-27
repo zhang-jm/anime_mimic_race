@@ -7,15 +7,13 @@ public class PlaceableObject {
     private string name;
     private string description;
     private GameObject prefab;
-    private GameObject staticPrefab;
     private Sprite sprite;
 
-    public PlaceableObject(string name, string description, GameObject prefab, GameObject staticPrefab, Sprite sprite)
+    public PlaceableObject(string name, string description, GameObject prefab, Sprite sprite)
     {
         this.name = name;
         this.description = description;
         this.prefab = prefab;
-        this.staticPrefab = staticPrefab;
         this.sprite = sprite;
     }
 
@@ -32,11 +30,6 @@ public class PlaceableObject {
     public GameObject getPrefab()
     {
         return prefab;
-    }
-
-    public GameObject getStaticPrefab()
-    {
-        return staticPrefab;
     }
 
     public Sprite getSprite()

@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour {
     public void addTrap(GameObject trap)
     {
         placedTraps.Add(trap);
+        DontDestroyOnLoad(trap);
     }
 
    

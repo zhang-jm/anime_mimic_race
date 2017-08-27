@@ -796,7 +796,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690218529774554}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.0293603, y: -5.351042, z: 0}
+  m_LocalPosition: {x: -16.438282, y: -2.5751643, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4298050403167002}
@@ -1496,6 +1496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPosition: {x: -16, y: 2, z: 1}
+  hairs:
+  - {fileID: 1701718431250802}
+  - {fileID: 1234605771866270}
   maxVelocity: 10
   acceleration: 1
   gravity: -10

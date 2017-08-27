@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
         for (int i = 0; i < gm.GetPlayerCount(); i++)
         {
             players.Add(Instantiate(player));
+            //players[i].
         }
 
         if(gm.GetPlayerCount() == 2)

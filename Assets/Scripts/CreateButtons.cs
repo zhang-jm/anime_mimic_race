@@ -16,7 +16,7 @@ public class CreateButtons : MonoBehaviour {
         {
             GameObject b = Instantiate(button, Vector3.zero, Quaternion.identity);
             b.transform.SetParent(transform);
-            b.transform.position = new Vector3(transform.position.x + (i * 100) - 400, transform.position.y, 0);
+            b.transform.position = new Vector3(transform.position.x + (i * 100) - 400, transform.position.y - 58, 0);
             buttons.Add(b);
         }
 	}

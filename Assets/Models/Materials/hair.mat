@@ -78,4 +78,4 @@ Material:
     m_Colors:
     - _Color: {r: 0.891, g: 0.4289, b: 0.8829, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.5970155, g: 0.19755623, b: 0.6397059, a: 1}

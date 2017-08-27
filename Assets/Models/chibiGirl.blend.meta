@@ -50,6 +50,7 @@ ModelImporter:
     100084: toe_R
     100086: upper_arm_L
     100088: upper_arm_R
+    100090: Bread
     400000: body
     400002: chest
     400004: //RootNode
@@ -95,6 +96,7 @@ ModelImporter:
     400084: toe_R
     400086: upper_arm_L
     400088: upper_arm_R
+    400090: Bread
     2300000: hair_MeshPart0
     2300002: hair_MeshPart1
     2300004: ribbon
@@ -112,8 +114,13 @@ ModelImporter:
     4300008: skirt
     4300010: hair_MeshPart0
     4300012: hair_MeshPart1
+    4300014: Bread
     7400000: Default Take
     7400002: walk
+    7400004: run
+    7400006: weebrun
+    7400008: jump
+    7400010: trip
     9500000: //RootNode
     13700000: body
     13700002: shirt
@@ -122,6 +129,7 @@ ModelImporter:
     13700008: ribbon
     13700010: scarf
     13700012: skirt
+    13700014: Bread
   materials:
     importMaterials: 1
     materialName: 0
@@ -274,6 +282,478 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: hair
+        weight: 1
+      - path: hair/hair_MeshPart0
+        weight: 1
+      - path: hair/hair_MeshPart1
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/head
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L/f_index_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L/thumb_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R/f_index_03_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R/thumb_03_R
+        weight: 1
+      - path: metarig/hips/thigh_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/heel_L
+        weight: 1
+      - path: metarig/hips/thigh_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/heel_R
+        weight: 1
+      - path: ribbon
+        weight: 1
+      - path: scarf
+        weight: 1
+      - path: shirt
+        weight: 1
+      - path: skirt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: metarigAction
+      firstFrame: 30
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: hair
+        weight: 1
+      - path: hair/hair_MeshPart0
+        weight: 1
+      - path: hair/hair_MeshPart1
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/head
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L/f_index_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L/thumb_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R/f_index_03_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R/thumb_03_R
+        weight: 1
+      - path: metarig/hips/thigh_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/heel_L
+        weight: 1
+      - path: metarig/hips/thigh_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/heel_R
+        weight: 1
+      - path: ribbon
+        weight: 1
+      - path: scarf
+        weight: 1
+      - path: shirt
+        weight: 1
+      - path: skirt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: weebrun
+      takeName: metarigAction
+      firstFrame: 65
+      lastFrame: 94
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: hair
+        weight: 1
+      - path: hair/hair_MeshPart0
+        weight: 1
+      - path: hair/hair_MeshPart1
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/head
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L/f_index_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L/thumb_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R/f_index_03_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R/thumb_03_R
+        weight: 1
+      - path: metarig/hips/thigh_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/heel_L
+        weight: 1
+      - path: metarig/hips/thigh_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/heel_R
+        weight: 1
+      - path: ribbon
+        weight: 1
+      - path: scarf
+        weight: 1
+      - path: shirt
+        weight: 1
+      - path: skirt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jump
+      takeName: metarigAction
+      firstFrame: 100
+      lastFrame: 107
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: hair
+        weight: 1
+      - path: hair/hair_MeshPart0
+        weight: 1
+      - path: hair/hair_MeshPart1
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/head
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/f_index_01_L/f_index_02_L/f_index_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_L/upper_arm_L/forearm_L/hand_L/thumb_01_L/thumb_02_L/thumb_03_L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/f_index_01_R/f_index_02_R/f_index_03_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder_R/upper_arm_R/forearm_R/hand_R/thumb_01_R/thumb_02_R/thumb_03_R
+        weight: 1
+      - path: metarig/hips/thigh_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/foot_L/toe_L
+        weight: 1
+      - path: metarig/hips/thigh_L/shin_L/heel_L
+        weight: 1
+      - path: metarig/hips/thigh_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/foot_R/toe_R
+        weight: 1
+      - path: metarig/hips/thigh_R/shin_R/heel_R
+        weight: 1
+      - path: ribbon
+        weight: 1
+      - path: scarf
+        weight: 1
+      - path: shirt
+        weight: 1
+      - path: skirt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: trip
+      takeName: metarigAction
+      firstFrame: 107
+      lastFrame: 132
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -384,7 +864,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.3
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

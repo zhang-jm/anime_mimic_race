@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;
     public float gravity = 10.0f;
+    public float jumpVelocity = 7.0f;
 
     public float trapStopAmtTime = 3.0f;
     public float trapSpeedAmtTime = 1.0f;
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour {
 
     private float raceTime = 0.0f;
 
+    Animator controller;
+
     public enum Status
     {
         normal,
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        controller = GetComponent<Animator>();
         transform.position = startingPosition;
 	}
 	
@@ -72,6 +76,8 @@ public class Player : MonoBehaviour {
             }
         }
 
+        controller.SetFloat("velocity", velocityX / maxVelocity);
+
         if(status == Status.normal) {
             if (velocityX < maxVelocity) //set max running speed
             {
@@ -85,6 +91,7 @@ public class Player : MonoBehaviour {
             {
                 //v1 = v0 + at
                 velocityX += acceleration * Time.deltaTime;
+                controller.SetFloat("velocity", 0);
             }
         }
 
@@ -92,29 +99,29 @@ public class Player : MonoBehaviour {
         transform.position += Vector3.right * velocityX * Time.deltaTime;
 
         //jump
-        if(Input.GetKeyDown(jumpKey))
+        if(Input.GetKeyDown(jumpKey) && !jumping)
         {
-            if(!jumping)
-            {
-                jumping = true;
-                velocityY = -5.0f;
-                startingHeight = transform.position.y;
-            }
+            jumping = true;
+            velocityY = jumpVelocity;
+            startingHeight = transform.position.y;
+
         }
 
         if (jumping)
         {
+            controller.SetBool("jumping", true);
             velocityY += gravity * Time.deltaTime;
             transform.position -= Vector3.up * velocityY * Time.deltaTime;
 
             if(transform.position.y < startingPosition.y)
             {
-                transform.position = new Vector3(transform.position.x, startingPosition.y, transform.position.z);
+               // transform.position = new Vector3(transform.position.x, startingPosition.y, transform.position.z);
                 jumping = false;
+                controller.SetBool("jumping", false);
             }
         }
-
-        //Debug.Log("Y velocity: " + velocityY);
+        
+        Debug.Log("Y velocity: " + velocityY);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -146,6 +153,8 @@ public class Player : MonoBehaviour {
             transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, transform.position.z);
             status = Status.stopped;
             velocityX = 0;
+            controller.SetTrigger("tripped");
+            
         }
         else if (other.gameObject.tag == "slowing_trap")
         {
@@ -159,6 +168,7 @@ public class Player : MonoBehaviour {
         }
         else if (other.gameObject.tag == "speed_up")
         {
+            controller.SetBool("speed", true);
             statusCounter = 0;
             status = Status.speedy;
             velocityX = speedyMaxVelocity;

@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 33625838637178242}
   - component: {fileID: 23390409530170244}
   - component: {fileID: 95189938184104884}
+  - component: {fileID: 114088713141034626}
+  - component: {fileID: 114322673033607726}
+  - component: {fileID: 65519555721571560}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -36,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317139602892780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.224379, y: -3.168857, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.711, y: -3.2123187, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317139602892780}
   m_Mesh: {fileID: 4300000, guid: ac9ebc9726aaafe489f148b960007a98, type: 3}
+--- !u!65 &65519555721571560
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317139602892780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7583338, y: 1.6564513, z: 3.4868681}
+  m_Center: {x: 0.042085648, y: -0.00051339465, z: -0.0072834888}
 --- !u!95 &95189938184104884
 Animator:
   serializedVersion: 3
@@ -98,3 +113,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114088713141034626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317139602892780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 0
+  wasHit: 0
+--- !u!114 &114322673033607726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317139602892780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe1e619234ad874eb897d55f7a8e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yThreshold: -4

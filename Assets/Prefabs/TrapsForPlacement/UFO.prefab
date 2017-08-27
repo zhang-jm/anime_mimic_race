@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23409641383598258}
   - component: {fileID: 95061453642693224}
   - component: {fileID: 114096897843145642}
+  - component: {fileID: 114891980379050978}
+  - component: {fileID: 65851566007575368}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408168114825076}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -7.207676, y: -2.95, z: -0}
+  m_LocalPosition: {x: 7.081, y: -2.259, z: 1.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,6 +86,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408168114825076}
   m_Mesh: {fileID: 4300000, guid: e9d38f999c67a7446822dd7bb29145f7, type: 3}
+--- !u!65 &65851566007575368
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408168114825076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8333459, y: 2.0720625, z: 0.84205943}
+  m_Center: {x: 0.0187037, y: 0.2139911, z: 0.019527614}
 --- !u!95 &95061453642693224
 Animator:
   serializedVersion: 3
@@ -114,3 +128,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trapType: 0
   wasHit: 0
+--- !u!114 &114891980379050978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408168114825076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe1e619234ad874eb897d55f7a8e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yThreshold: -4

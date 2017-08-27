@@ -38,6 +38,8 @@ GameObject:
   - component: {fileID: 4967899029526064}
   - component: {fileID: 95016222909645474}
   - component: {fileID: 114791288108331394}
+  - component: {fileID: 114817605352708738}
+  - component: {fileID: 65987429006039500}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -94,15 +96,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813745509535754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.022263, y: -3.2806702, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -14.638073, y: -3.5304298, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4310930970939894}
   - {fileID: 4002405883122802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &23805355934364622
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -182,6 +184,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014374448944152}
   m_Mesh: {fileID: 4300000, guid: b16ae70f34898704281701113571294f, type: 3}
+--- !u!65 &65987429006039500
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813745509535754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4686003, y: 0.28380919, z: 1.4067189}
+  m_Center: {x: -0.1511817, y: -0.12885737, z: -0.0063914657}
 --- !u!95 &95016222909645474
 Animator:
   serializedVersion: 3
@@ -212,3 +226,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trapType: 0
   wasHit: 0
+--- !u!114 &114817605352708738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813745509535754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe1e619234ad874eb897d55f7a8e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yThreshold: -4

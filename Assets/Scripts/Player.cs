@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
 
     public Vector3 startingPosition = new Vector3(-10f, -2.5f, 0.9f);
 
+    public GameObject[] hairs;
+
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;
     public float gravity = -10.0f;

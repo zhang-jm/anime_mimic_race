@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject player;
     public List<GameObject> players;
+    public Color[] playerColors;
 
     private GameManager gm;
 
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         gm = GameManager.Instance;
         spawnPlayers();
+        playerColors = new Color[4];
+        AssignColors();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +28,6 @@ public class PlayerController : MonoBehaviour {
         for (int i = 0; i < gm.GetPlayerCount(); i++)
         {
             players.Add(Instantiate(player));
-            //players[i].
         }
 
         if(gm.GetPlayerCount() == 2)
@@ -65,4 +67,18 @@ public class PlayerController : MonoBehaviour {
             p4Cam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
         }
     }
+    public void AssignColors() {
+        playerColors[0] = new Color(206/255f, 34/255f, 129/255f);
+        playerColors[1] = new Color(72/255f, 209/255f, 204/255f);
+        playerColors[2] = new Color(144/255f, 197/255f, 127/255f);
+        playerColors[3] = new Color(212/225f, 201/255f, 87/255f);
+
+        for (int x = 0; x < players.Count; x++)
+        {
+            players[x].GetComponent<Player>().hairs[0].GetComponent<SkinnedMeshRenderer>().material.color = playerColors[x];
+            players[x].GetComponent<Player>().hairs[1].GetComponent<SkinnedMeshRenderer>().material.color = playerColors[x];
+
+        }
+    }
+
 }

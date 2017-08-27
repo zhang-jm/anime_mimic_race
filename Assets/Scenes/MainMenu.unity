@@ -680,7 +680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCount: 0
+  player: {fileID: 0}
   placedTraps: []
+  players: []
 --- !u!224 &1382714624
 RectTransform:
   m_ObjectHideFlags: 0

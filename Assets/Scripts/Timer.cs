@@ -39,14 +39,18 @@ public class Timer : MonoBehaviour {
             if (countdown <= 0.0f)
             {
                 timerText.text = "Time up!";
-                gm.playerPlacingTraps++;
-                if (gm.playerPlacingTraps > gm.playerCount)
+
+                if (gm.placingObject == false)
                 {
-                    SceneManager.LoadScene(2);
-                }
-                else
-                {
-                    SceneManager.LoadScene(1);
+                    gm.playerPlacingTraps++;
+                    if (gm.playerPlacingTraps > gm.playerCount)
+                    {
+                        SceneManager.LoadScene(2);
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(1);
+                    }
                 }
             }
         }

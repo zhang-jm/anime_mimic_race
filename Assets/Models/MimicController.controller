@@ -10,8 +10,13 @@ AnimatorController:
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
+<<<<<<< HEAD
     m_Name: Base Layer
     m_StateMachine: {fileID: 1107092110967968590}
+=======
+    m_Name: New Layer
+    m_StateMachine: {fileID: 1107270478233574628}
+>>>>>>> 2fee9aa0d2c2e3db579f42d7fd673ddc4004bef7
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -21,13 +26,21 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1107 &1107092110967968590
+=======
+--- !u!1107 &1107270478233574628
+>>>>>>> 2fee9aa0d2c2e3db579f42d7fd673ddc4004bef7
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_Name: Base Layer
+=======
+  m_Name: New Layer
+>>>>>>> 2fee9aa0d2c2e3db579f42d7fd673ddc4004bef7
   m_ChildStates: []
   m_ChildStateMachines: []
   m_AnyStateTransitions: []

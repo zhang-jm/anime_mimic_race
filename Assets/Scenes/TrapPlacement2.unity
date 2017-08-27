@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 870929502}
   m_Layer: 0
   m_Name: Environment
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,6 +925,10 @@ MonoBehaviour:
     type: 2}
   tentacleFieldSprite: {fileID: 21300000, guid: 7c2ac9915821bbc4381b211cf6d131c7,
     type: 3}
+  goodChest: {fileID: 0}
+  goodChestSprite: {fileID: 0}
+  badChest: {fileID: 0}
+  badChestSprite: {fileID: 0}
 --- !u!1 &991835554
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +942,7 @@ GameObject:
   - component: {fileID: 991835556}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1050,7 +1054,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1363,7 +1367,7 @@ MonoBehaviour:
   playerText2: {fileID: 687848015}
   startPlacement: {fileID: 1544083310}
   trapPlacementUI: {fileID: 503699045}
-  countdown: 5
+  countdown: 30
 --- !u!4 &1637477628
 Transform:
   m_ObjectHideFlags: 0

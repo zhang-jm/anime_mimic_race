@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e70de3f22cb57574a9962ee73fb9ca7b
-timeCreated: 1503864058
+guid: f55dbd2520dd5f943a63d38f847aff61
+timeCreated: 1503864567
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder
+    4300000: Circle
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -38,7 +38,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.7
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour {
 
     public Text timerText;
     public Text playerText;
+    public Text playerText2;
 
     public Canvas startPlacement;
     public Canvas trapPlacementUI;
@@ -20,6 +21,7 @@ public class Timer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gm = GameManager.Instance;
+        playerText2.text = "Player " + gm.playerPlacingTraps;
         playerText.text = "Player " + gm.playerPlacingTraps + " is placing traps.";
 	}
 

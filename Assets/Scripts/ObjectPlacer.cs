@@ -49,5 +49,7 @@ public class ObjectPlacer : MonoBehaviour {
         {
             rb.isKinematic = false;
         }
+
+        Destroy(this);
     }
 }

@@ -5,8 +5,10 @@ using UnityEngine;
 public class TrapManager : MonoBehaviour
 {
     public GameObject bearTrap;
-    public GameObject staticBearTrap;
     public Sprite bearTrapSprite;
+
+    public GameObject tentacleField;
+    public Sprite tentacleFieldSprite;
 
     private static TrapManager instance = null;
 
@@ -47,7 +49,7 @@ public class TrapManager : MonoBehaviour
         possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Toast", "Gives a 1 second speed boost for the first player to pick it up.", bearTrap, bearTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Poison Toast", "Slows down any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
-        possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Tentacle Field", "ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn", tentacleField, tentacleFieldSprite));
         possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
     }
 

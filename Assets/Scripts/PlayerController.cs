@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour {
     public Color[] playerColors;
     public KeyCode[] jumpCodes;
 
+    public GameObject canvas2;
+    public GameObject canvas3;
+    public GameObject canvas4;
+
     private GameManager gm;
 
 	// Use this for initialization
@@ -41,6 +45,8 @@ public class PlayerController : MonoBehaviour {
             p1Cam.rect = new Rect(0, 0, 1, 0.5f);
             Camera p2Cam = player2.transform.Find("Main Camera").GetComponent<Camera>();
             p2Cam.rect = new Rect(0, 0.5f, 1, 0.5f);
+
+            canvas2.SetActive(true);
         }
         else if(gm.GetPlayerCount() == 3)
         {
@@ -53,6 +59,8 @@ public class PlayerController : MonoBehaviour {
             p2Cam.rect = new Rect(0, 0.33f, 1, 0.34f);
             Camera p3Cam = player3.transform.Find("Main Camera").GetComponent<Camera>();
             p3Cam.rect = new Rect(0, 0.67f, 1, 0.33f);
+
+            canvas3.SetActive(true);
         }
         else if (gm.GetPlayerCount() == 4)
         {
@@ -68,6 +76,8 @@ public class PlayerController : MonoBehaviour {
             p3Cam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
             Camera p4Cam = player4.transform.Find("Main Camera").GetComponent<Camera>();
             p4Cam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+
+            canvas4.SetActive(true);
         }
     }
     public void AssignColors() {
@@ -97,6 +107,15 @@ public class PlayerController : MonoBehaviour {
         {
             players[x].GetComponent<Player>().jumpKey = jumpCodes[x];
        
+        }
+    }
+
+    public void start()
+    {
+        for (int x = 0; x < players.Count; x++)
+        {
+            players[x].GetComponent<Player>().startMoving();
+
         }
     }
 

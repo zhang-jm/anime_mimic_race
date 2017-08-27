@@ -134,7 +134,7 @@ public class Player : MonoBehaviour {
         {
             if (jumping)
             {
-
+                controller.SetBool("jumping", false);
                 Debug.Log("jump collision");
                 velocityY = 0;
                 jumping = false;

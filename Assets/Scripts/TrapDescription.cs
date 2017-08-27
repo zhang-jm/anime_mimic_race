@@ -44,6 +44,7 @@ public class TrapDescription : MonoBehaviour {
 
     public void showUI()
     {
+        thisUi.transform.position = new Vector3(transform.position.x, transform.position.y - 150, 0);
         thisUi.gameObject.SetActive(true);
     }
 
@@ -54,13 +55,17 @@ public class TrapDescription : MonoBehaviour {
 
     public void spawnObject()
     {
-        spawnedObj = Instantiate(trap.getPrefab(), Vector3.zero, Quaternion.identity); 
-        spawnedObj.transform.localScale = new Vector3(1, 1, 1);
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
-        spawnedObj.transform.position = new Vector3(curPosition.x, curPosition.y - 3, 1);
+        if (!gm.placingObject)
+        {
+            spawnedObj = Instantiate(trap.getPrefab(), Vector3.zero, Quaternion.identity);
+            spawnedObj.transform.localScale = new Vector3(1, 1, 1);
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
+            spawnedObj.transform.position = new Vector3(curPosition.x, curPosition.y - 5, 1);
 
-        gm.addTrap(spawnedObj);
+            gm.placingObject = true;
+            gm.addTrap(spawnedObj);
+        }
     }
 
     public void dragObject()

@@ -57,19 +57,21 @@ public class ObjectPlacer : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collided");
-        Collider c = GetComponent<Collider>();
-        if (c != null)
-        {
-            c.isTrigger = true;
-        }
-
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.isKinematic = true;
+            rb.useGravity = false;
         }
 
-        Destroy(this);
+        gm.placingObject = false;
+
+        if (collision.gameObject.tag != "platform")
+        {
+            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        } else
+        {
+            Destroy(this);
+        }
     }
 }

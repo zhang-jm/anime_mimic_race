@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
     private float statusCounter = 0;
 
     private bool jumping = false;
-    private Status status = Status.finished;
+    public Status status = Status.finished;
 
     private float raceTime = 0.0f;
 

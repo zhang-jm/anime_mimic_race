@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
     public List<GameObject> placedTraps;
     public List<GameObject> players;
     public int playerPlacingTraps = 1;
+    public bool placingObject = false;
 
     void Awake() {
         _instance = this;

@@ -16,7 +16,6 @@ public class PlaceObjects : MonoBehaviour {
         foreach (GameObject obj in placedObjects)
         {
             Destroy(obj.GetComponent<ObjectPlacer>());
-            Destroy(obj.GetComponent<EventTrigger>());
             Destroy(obj.GetComponent<Rigidbody>());
 
             obj.GetComponent<Collider>().isTrigger = true;

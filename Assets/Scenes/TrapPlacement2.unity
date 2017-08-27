@@ -694,8 +694,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bearTrap: {fileID: 1278590062732880, guid: 140cdf5025bd09148b3bce8f489ac28f, type: 2}
-  staticBearTrap: {fileID: 0}
   bearTrapSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
+  tentacleField: {fileID: 1546608501172726, guid: 91400c2c8ec764643802ae4571901f6e,
+    type: 2}
+  tentacleFieldSprite: {fileID: 21300000, guid: 7c2ac9915821bbc4381b211cf6d131c7,
+    type: 3}
 --- !u!1 &991835554
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1205154891}
-  countdown: 1
+  countdown: 10
 --- !u!4 &1637477628
 Transform:
   m_ObjectHideFlags: 0

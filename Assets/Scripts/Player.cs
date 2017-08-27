@@ -113,14 +113,14 @@ public class Player : MonoBehaviour {
         {
             controller.SetBool("jumping", true);
             velocityY += gravity * Time.deltaTime;
-          //  transform.position -= Vector3.up * velocityY * Time.deltaTime;
+            transform.position += Vector3.up * velocityY * Time.deltaTime;
 
-            if(transform.position.y < startingPosition.y)
+            /*if(transform.position.y < startingPosition.y)
             {
                // transform.position = new Vector3(transform.position.x, startingPosition.y, transform.position.z);
                 jumping = false;
                 controller.SetBool("jumping", false);
-            }
+            }*/
         }
         
         Debug.Log("Y velocity: " + velocityY);
@@ -134,6 +134,9 @@ public class Player : MonoBehaviour {
         {
             if (jumping)
             {
+
+                Debug.Log("jump collision");
+                velocityY = 0;
                 jumping = false;
             }
         }
@@ -145,6 +148,7 @@ public class Player : MonoBehaviour {
 
         if (other.gameObject.tag == "platform")
         {
+            Debug.Log("trigger detected!");
             if (jumping)
             {
                 jumping = false;

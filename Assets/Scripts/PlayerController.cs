@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject canvas3;
     public GameObject canvas4;
 
+    public TrapEffectResolver resolver;
+
     private GameManager gm;
 
 	// Use this for initialization
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour {
         jumpCodes = new KeyCode[4];
         AssignColors();
         AssignJump();
+
+        gm.players = players;
 	}
 	
 	// Update is called once per frame
@@ -37,14 +41,19 @@ public class PlayerController : MonoBehaviour {
             players.Add(Instantiate(player));
         }
 
+        foreach(GameObject g in players)
+        {
+            g.GetComponent<Player>().effectResolver = resolver;
+        }
+
         if(gm.GetPlayerCount() == 2)
         {
             GameObject player1 = players[0];
             GameObject player2 = players[1];
             Camera p1Cam = player1.transform.Find("Main Camera").GetComponent<Camera>();
-            p1Cam.rect = new Rect(0, 0, 1, 0.5f);
+            p1Cam.rect = new Rect(0, 0.5f, 1, 0.5f);
             Camera p2Cam = player2.transform.Find("Main Camera").GetComponent<Camera>();
-            p2Cam.rect = new Rect(0, 0.5f, 1, 0.5f);
+            p2Cam.rect = new Rect(0, 0, 1, 0.5f);
 
             canvas2.SetActive(true);
         }
@@ -54,11 +63,11 @@ public class PlayerController : MonoBehaviour {
             GameObject player2 = players[1];
             GameObject player3 = players[2];
             Camera p1Cam = player1.transform.Find("Main Camera").GetComponent<Camera>();
-            p1Cam.rect = new Rect(0, 0, 1, 0.33f);
+            p1Cam.rect = new Rect(0, 0.67f, 1, 0.33f); 
             Camera p2Cam = player2.transform.Find("Main Camera").GetComponent<Camera>();
             p2Cam.rect = new Rect(0, 0.33f, 1, 0.34f);
             Camera p3Cam = player3.transform.Find("Main Camera").GetComponent<Camera>();
-            p3Cam.rect = new Rect(0, 0.67f, 1, 0.33f);
+            p3Cam.rect = new Rect(0, 0, 1, 0.33f);
 
             canvas3.SetActive(true);
         }
@@ -69,13 +78,13 @@ public class PlayerController : MonoBehaviour {
             GameObject player3 = players[2];
             GameObject player4 = players[3];
             Camera p1Cam = player1.transform.Find("Main Camera").GetComponent<Camera>();
-            p1Cam.rect = new Rect(0, 0, 0.5f, 0.5f);
+            p1Cam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
             Camera p2Cam = player2.transform.Find("Main Camera").GetComponent<Camera>();
-            p2Cam.rect = new Rect(0.5f, 0, 0.5f, 0.5f);
+            p2Cam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
             Camera p3Cam = player3.transform.Find("Main Camera").GetComponent<Camera>();
-            p3Cam.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
+            p3Cam.rect = new Rect(0, 0, 0.5f, 0.5f); 
             Camera p4Cam = player4.transform.Find("Main Camera").GetComponent<Camera>();
-            p4Cam.rect = new Rect(0.5f, 0.5f, 0.5f, 0.5f);
+            p4Cam.rect = new Rect(0.5f, 0, 0.5f, 0.5f); 
 
             canvas4.SetActive(true);
         }

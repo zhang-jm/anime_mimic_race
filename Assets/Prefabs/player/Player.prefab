@@ -1507,7 +1507,7 @@ MonoBehaviour:
   trapSpeedAmtTime: 1
   slowedMaxVelocity: 5
   speedyMaxVelocity: 20
-  jumpKey: 32
+  jumpKey: 0
 --- !u!124 &124294007463817878
 Behaviour:
   m_ObjectHideFlags: 1

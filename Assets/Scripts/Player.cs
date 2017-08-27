@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     public float slowedMaxVelocity = 5.0f;
     public float speedyMaxVelocity = 20.0f;
 
-    public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode jumpKey;
 
     private float velocityX = 0;
     private float velocityY = 0;

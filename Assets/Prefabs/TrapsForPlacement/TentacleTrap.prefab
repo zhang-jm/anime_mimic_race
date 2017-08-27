@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 65447500850383962}
   - component: {fileID: 114962470984361080}
   - component: {fileID: 54511988512826720}
+  - component: {fileID: 114225092284848538}
   m_Layer: 0
   m_Name: TentacleTrap
   m_TagString: slowing_trap
@@ -1179,6 +1180,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114225092284848538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546608501172726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 12
 --- !u!114 &114962470984361080
 MonoBehaviour:
   m_ObjectHideFlags: 1

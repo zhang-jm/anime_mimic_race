@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114663078837563586}
   - component: {fileID: 54627880524388810}
   - component: {fileID: 65502551910227738}
+  - component: {fileID: 114782857129045870}
   m_Layer: 0
   m_Name: Pillow
   m_TagString: Untagged
@@ -140,3 +141,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yThreshold: -4
+--- !u!114 &114782857129045870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308049853128916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 7
+  wasHit: 0

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 
     public float trapStopAmtTime = 3.0f;
     public float trapSpeedAmtTime = 1.0f;
+    public float trapSlowAmtTime = 3.0f;
     public float slowedMaxVelocity = 5.0f;
     public float speedyMaxVelocity = 20.0f;
 
@@ -30,12 +31,15 @@ public class Player : MonoBehaviour {
 
     private float raceTime = 0.0f;
 
-    Animator controller;
+    public TrapEffectResolver effectResolver;
+
+    public Animator controller;
 
     public enum Status
     {
         normal,
         slowed,
+        slowedForTime,
         stopped, 
         speedy,
         finished
@@ -58,6 +62,9 @@ public class Player : MonoBehaviour {
 
         if(status == Status.stopped)
         {
+            velocityX = 0;
+            controller.SetBool("speedy", false);
+
             statusCounter += Time.deltaTime;
             if(statusCounter >= trapStopAmtTime)
             {
@@ -69,6 +76,8 @@ public class Player : MonoBehaviour {
         }
         else if (status == Status.speedy)
         {
+            velocityX = speedyMaxVelocity;
+
             statusCounter += Time.deltaTime;
             controller.SetBool("speedy", true);
             if (statusCounter >= trapSpeedAmtTime)
@@ -83,6 +92,8 @@ public class Player : MonoBehaviour {
         controller.SetFloat("velocity", velocityX / maxVelocity);
 
         if(status == Status.normal) {
+            controller.SetBool("speedy", false);
+
             if (velocityX < maxVelocity) //set max running speed
             {
                 //v1 = v0 + at
@@ -91,11 +102,37 @@ public class Player : MonoBehaviour {
         }
         else if (status == Status.slowed)
         {
+            if (velocityX > slowedMaxVelocity) //slow down players velocity if they're running faster
+            {
+                velocityX = slowedMaxVelocity;
+            }
+
             if (velocityX < slowedMaxVelocity) //set max running speed
             {
                 //v1 = v0 + at
                 velocityX += acceleration * Time.deltaTime;
                 controller.SetFloat("velocity", 0);
+            }
+        }
+        else if (status == Status.slowedForTime)
+        {
+            if (velocityX > slowedMaxVelocity) //slow down players velocity if they're running faster
+            {
+                velocityX = slowedMaxVelocity;
+            }
+
+            if (velocityX < slowedMaxVelocity) //set max running speed
+            {
+                //v1 = v0 + at
+                velocityX += acceleration * Time.deltaTime;
+                controller.SetFloat("velocity", 0);
+            }
+
+            statusCounter += Time.deltaTime;
+            if (statusCounter >= trapSlowAmtTime)
+            {
+                statusCounter = 0;
+                status = Status.normal;
             }
         }
 
@@ -151,47 +188,7 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("trigger detected!");
-
-        if (other.gameObject.tag == "platform")
-        {
-            Debug.Log("trigger detected!");
-            if (jumping)
-            {
-                jumping = false;
-            }
-        } else if (other.gameObject.tag == "stopping_trap")
-        {
-            statusCounter = 0;
-            transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, transform.position.z);
-            status = Status.stopped;
-            velocityX = 0;
-            controller.SetTrigger("tripped");
-            
-        }
-        else if (other.gameObject.tag == "slowing_trap")
-        {
-            statusCounter = 0;
-            Debug.Log("slowing trigger detected!");
-            status = Status.slowed;
-            if(velocityX > slowedMaxVelocity) //slow down players velocity if they're running faster
-            {
-                velocityX = slowedMaxVelocity;
-            }
-        }
-        else if (other.gameObject.tag == "speed_up")
-        {
-            controller.SetBool("speed", true);
-            statusCounter = 0;
-            status = Status.speedy;
-            velocityX = speedyMaxVelocity;
-        }
-        else if (other.gameObject.tag == "finish")
-        {
-            Debug.Log("race time: " + raceTime);
-            status = Status.finished;
-            velocityX = 0;
-        }
+        effectResolver.resolveEffect(gameObject, other.gameObject);
     }
 
     private void OnCollisionExit(Collision collision)
@@ -211,14 +208,21 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "slowing_trap")
-        {
-            status = Status.normal;
-        }
+        effectResolver.resolveEffectOnExit(gameObject, other.gameObject);
     }
 
     public void startMoving()
     {
         status = Status.normal;
+    }
+
+    public void resetStatusCounter()
+    {
+        statusCounter = 0;
+    }
+
+    public void setVelocityX(float vel)
+    {
+        velocityX = vel;
     }
 }

@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 65804836775503854}
   - component: {fileID: 54940488534213916}
   - component: {fileID: 114471679737681346}
+  - component: {fileID: 114116969829948566}
   m_Layer: 0
   m_Name: GoodChest
   m_TagString: Untagged
@@ -246,6 +247,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114116969829948566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217316946889512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 3
+  wasHit: 0
 --- !u!114 &114471679737681346
 MonoBehaviour:
   m_ObjectHideFlags: 1

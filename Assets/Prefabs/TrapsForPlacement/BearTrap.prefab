@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65198195357457144}
   - component: {fileID: 114032082712833998}
   - component: {fileID: 54591978419888906}
+  - component: {fileID: 114328094871171708}
   m_Layer: 8
   m_Name: BearTrap
   m_TagString: stopping_trap
@@ -327,6 +328,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf80e8be95b7e8429f1414fd533f534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114328094871171708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278590062732880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 0
 --- !u!137 &137145190639471186
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

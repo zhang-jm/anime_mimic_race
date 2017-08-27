@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65995520761077698}
   - component: {fileID: 54039912657880072}
   - component: {fileID: 114382153506502468}
+  - component: {fileID: 114692329120215056}
   m_Layer: 0
   m_Name: Glasses
   m_TagString: Untagged
@@ -141,3 +142,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yThreshold: -4
+--- !u!114 &114692329120215056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262373683054918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 8

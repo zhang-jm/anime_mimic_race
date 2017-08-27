@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
     public List<GameObject> placedTraps;
     public List<GameObject> players;
+    public int playerPlacingTraps = 1;
 
     void Awake() {
         _instance = this;

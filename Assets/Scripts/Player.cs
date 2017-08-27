@@ -127,8 +127,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("collision detected!");
+    { 
 
         if (other.gameObject.tag == "platform")
         {
@@ -142,6 +141,7 @@ public class Player : MonoBehaviour {
         }
         else if (other.gameObject.tag == "Player")
         {
+            Debug.Log("collision detected!");
             Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
     }

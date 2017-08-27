@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
 
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;
-    public float gravity = 10.0f;
+    public float gravity = -10.0f;
     public float jumpVelocity = 7.0f;
 
     public float trapStopAmtTime = 3.0f;
@@ -68,11 +68,13 @@ public class Player : MonoBehaviour {
         else if (status == Status.speedy)
         {
             statusCounter += Time.deltaTime;
+            controller.SetBool("speedy", true);
             if (statusCounter >= trapSpeedAmtTime)
             {
                 statusCounter = 0;
                 velocityX = maxVelocity;
                 status = Status.normal;
+                controller.SetBool("speedy", false);
             }
         }
 
@@ -111,7 +113,7 @@ public class Player : MonoBehaviour {
         {
             controller.SetBool("jumping", true);
             velocityY += gravity * Time.deltaTime;
-            transform.position -= Vector3.up * velocityY * Time.deltaTime;
+          //  transform.position -= Vector3.up * velocityY * Time.deltaTime;
 
             if(transform.position.y < startingPosition.y)
             {

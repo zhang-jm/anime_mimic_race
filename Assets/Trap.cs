@@ -22,7 +22,8 @@ public class Trap : MonoBehaviour {
         switch_positions,
         freeze_self,
         freeze_others,
-        tentacle
+        tentacle,
+        finish
     }
 
 	// Use this for initialization

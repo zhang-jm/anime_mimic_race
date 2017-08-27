@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TrapEffectResolver : MonoBehaviour {
 
@@ -48,30 +49,6 @@ public class TrapEffectResolver : MonoBehaviour {
 
     public void resolveEffect(GameObject player, GameObject trap)
     {
-        /*
-        else if (other.gameObject.tag == "slowing_trap")
-        {
-            statusCounter = 0;
-            Debug.Log("slowing trigger detected!");
-            status = Status.slowed;
-            if (velocityX > slowedMaxVelocity) //slow down players velocity if they're running faster
-            {
-                velocityX = slowedMaxVelocity;
-            }
-        }
-        else if (other.gameObject.tag == "speed_up")
-        {
-            controller.SetBool("speed", true);
-            statusCounter = 0;
-            status = Status.speedy;
-            velocityX = speedyMaxVelocity;
-        }
-        else if (other.gameObject.tag == "finish")
-        {
-            Debug.Log("race time: " + raceTime);
-            status = Status.finished;
-            velocityX = 0;
-        }*/
         Trap t = trap.gameObject.GetComponent<Trap>();
         if(t ==  null)
         {
@@ -119,6 +96,11 @@ public class TrapEffectResolver : MonoBehaviour {
                 showingCanvas = true;
                 canvasToShow.SetActive(true);
                 break;
+
+            case Trap.TrapType.finish:
+                thisPlayer.status = Player.Status.finished;
+                thisPlayer.setVelocityX(0);
+                break;
         }
 
         t.wasHit = true;
@@ -146,5 +128,18 @@ public class TrapEffectResolver : MonoBehaviour {
         }
 
         t.wasHit = true;
+    }
+
+    private void setUpCanvas(Trap.TrapType trapType)
+    {
+        GameObject p1;
+        GameObject p2;
+        GameObject p3;
+        GameObject p4;
+
+        p1 = canvasToShow.transform.Find("P1").gameObject;
+        p1 = canvasToShow.transform.Find("P1").gameObject;
+        p1 = canvasToShow.transform.Find("P1").gameObject;
+        p1 = canvasToShow.transform.Find("P1").gameObject;
     }
 }

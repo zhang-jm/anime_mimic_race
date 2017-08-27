@@ -42,7 +42,7 @@ public class ObjectPlacer : MonoBehaviour {
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         if(curPosition.y > yThreshold)
         {
-            transform.position = curPosition;
+            transform.position = new Vector3(curPosition.x, curPosition.y, 8.0f);
         }
     }
 

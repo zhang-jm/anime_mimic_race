@@ -61,7 +61,8 @@ public class TrapDescription : MonoBehaviour {
             spawnedObj.transform.localScale = new Vector3(1, 1, 1);
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
-            spawnedObj.transform.position = new Vector3(curPosition.x, curPosition.y - 5, 1);
+            spawnedObj.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
+            spawnedObj.transform.position = new Vector3(Camera.main.transform.position.x, curPosition.y - 30, 8);
 
             gm.placingObject = true;
             gm.addTrap(spawnedObj);

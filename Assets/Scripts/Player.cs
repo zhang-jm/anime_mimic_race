@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    public Vector3 startingPosition = new Vector3(-10f, -2.5f);
+    public Vector3 startingPosition = new Vector3(-10f, -2.5f, 0.9f);
 
     public float maxVelocity = 10.0f;
     public float acceleration = 1.5f;

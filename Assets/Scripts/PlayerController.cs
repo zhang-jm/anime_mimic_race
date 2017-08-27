@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject canvas3;
     public GameObject canvas4;
 
+    public TrapEffectResolver resolver;
+
     private GameManager gm;
 
 	// Use this for initialization
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour {
         jumpCodes = new KeyCode[4];
         AssignColors();
         AssignJump();
+
+        gm.players = players;
 	}
 	
 	// Update is called once per frame
@@ -35,6 +39,11 @@ public class PlayerController : MonoBehaviour {
         for (int i = 0; i < gm.GetPlayerCount(); i++)
         {
             players.Add(Instantiate(player));
+        }
+
+        foreach(GameObject g in players)
+        {
+            g.GetComponent<Player>().effectResolver = resolver;
         }
 
         if(gm.GetPlayerCount() == 2)

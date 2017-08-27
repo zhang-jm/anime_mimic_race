@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class TrapEffectResolver : MonoBehaviour {
 
@@ -10,26 +11,33 @@ public class TrapEffectResolver : MonoBehaviour {
     public float showCanvasLength = 2.0f;
 
     private GameObject canvasToShow;
-    private bool showingCanvas;
+    private bool showingCanvas = false;
     private float showCanvasTimer;
 
-	// Use this for initialization
-	void Start () {
+    private GameObject player;
+    private GameObject temp;
+
+    public GameObject canvas2;
+    public GameObject canvas3;
+    public GameObject canvas4;
+
+    // Use this for initialization
+    void Start () {
         gm = GameManager.Instance;
 
-        canvasToShow = pc.canvas2;
+        canvasToShow = canvas2;
 
         if(gm.playerCount == 2)
         {
-            canvasToShow = pc.canvas2;
+            canvasToShow = canvas2;
         }
         else if (gm.playerCount == 3)
         {
-            canvasToShow = pc.canvas3;
+            canvasToShow = canvas3;
         }
         else if (gm.playerCount == 4)
         {
-            canvasToShow = pc.canvas4;
+            canvasToShow = canvas4;
         }
     }
 	
@@ -57,6 +65,10 @@ public class TrapEffectResolver : MonoBehaviour {
 
         Player thisPlayer = player.GetComponent<Player>();
 
+        canvasToShow.SetActive(false);
+        showingCanvas = false;
+
+        Debug.Log(t.trapType);
         switch (t.trapType)
         {
             case Trap.TrapType.stop_player:
@@ -95,6 +107,7 @@ public class TrapEffectResolver : MonoBehaviour {
             case Trap.TrapType.fight_for_mouse:
                 showingCanvas = true;
                 canvasToShow.SetActive(true);
+                setUpCanvas(Trap.TrapType.fight_for_mouse);
                 break;
 
             case Trap.TrapType.finish:
@@ -132,14 +145,53 @@ public class TrapEffectResolver : MonoBehaviour {
 
     private void setUpCanvas(Trap.TrapType trapType)
     {
-        GameObject p1;
-        GameObject p2;
-        GameObject p3;
-        GameObject p4;
+        GameObject p1 = null;
+        GameObject p2 = null;
+        GameObject p3 = null;
+        GameObject p4 = null;
 
         p1 = canvasToShow.transform.Find("P1").gameObject;
-        p1 = canvasToShow.transform.Find("P1").gameObject;
-        p1 = canvasToShow.transform.Find("P1").gameObject;
-        p1 = canvasToShow.transform.Find("P1").gameObject;
+        p2 = canvasToShow.transform.Find("P2").gameObject;
+
+        if(canvasToShow.transform.Find("P3") != null)
+        {
+            p3 = canvasToShow.transform.Find("P3").gameObject;
+        }
+
+        if(canvasToShow.transform.Find("P4") != null)
+        {
+            p4 = canvasToShow.transform.Find("P4").gameObject;
+        }
+
+        temp = new GameObject();
+        temp.AddComponent<Trap>();
+
+        switch (trapType)
+        {
+            case Trap.TrapType.fight_for_mouse:
+                canvasToShow.transform.Find("Button").gameObject.SetActive(false);
+                canvasToShow.transform.Find("Instructions").gameObject.SetActive(true);
+
+                float val = Random.value;
+                Debug.Log(val);
+
+                if(val < 0.5)
+                {
+                    temp.GetComponent<Trap>().trapType = Trap.TrapType.speed_up;
+                    canvasToShow.transform.Find("Instructions/Text").gameObject.GetComponent<Text>().text = "Quick! Click the player you want to speed up!";
+                }
+                else
+                {
+                    temp.GetComponent<Trap>().trapType = Trap.TrapType.slow_player_fixed;
+                    canvasToShow.transform.Find("Instructions/Text").gameObject.GetComponent<Text>().text = "Quick! Click the player you want to slow down!";
+                }
+                break;
+        }
+    }
+
+    public void onClick(int player)
+    {
+        Debug.Log(player + " click");
+        resolveEffect(pc.players[player], temp);
     }
 }

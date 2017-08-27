@@ -53,6 +53,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Debug.Log(velocityX);
         if(status == Status.finished)
         {
             return; //do nothing

@@ -52,8 +52,17 @@ public class TrapManager : MonoBehaviour
     public GameObject stopwatchTrap;
     public Sprite stopwatchTrapSprite;
 
+    public GameObject badStopwatchTrap;
+    public Sprite badStopwatchTrapSprite;
+
     public GameObject ufoTrap;
     public Sprite ufoTrapSprite;
+
+    public GameObject toast;
+    public Sprite toastSprite;
+
+    public GameObject poisonToast;
+    public Sprite poisonToastSprite;
            
 
     private static TrapManager instance = null;
@@ -127,8 +136,8 @@ UFO
 */
         possibleTrapList.Add(new PlaceableObject("Bear Trap", "Stops any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Tentacle Field", "ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn", tentacleField, tentacleFieldSprite));
-        possibleTrapList.Add(new PlaceableObject("Toast", "Gives a 1 second speed boost for the first player to pick it up.", goodChest, bearTrapSprite));
-        possibleTrapList.Add(new PlaceableObject("Poison Toast", "Slows down any player who steps on this trap for 3 seconds.", bearTrap, bearTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Toast", "Gives a 1 second speed boost for the first player to pick it up.", toast, toastSprite));
+        possibleTrapList.Add(new PlaceableObject("Poison Toast", "Slows down any player who steps on this trap for 3 seconds.", poisonToast, poisonToastSprite));
         possibleTrapList.Add(new PlaceableObject("Box of Spaghetti", "This is a box of spaghetti. It says Bring 4 - 6 quarts of water to a rolling boil, add salt to taste.Add contents of the package to boiling water.Return to a boil. For authentic al dente pasta, boil uncovered, stirring occasionally for 9 minutes. ... Remove from heat. Serve immediately with your favorite Barilla sauce.", spaghettiTrap, spaghettiTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Button", "Will you push the big red button?", buttonTrap, buttonTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Coin", "Everything for a price", coinTrap, coinTrapSprite));
@@ -141,7 +150,10 @@ UFO
         possibleTrapList.Add(new PlaceableObject("Senpai Magnet", "Surely I can get closer to senpai with this", magnetTrap, magnetTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Senpai Magnet", "Surely I can get closer to senpai with this", badMagnetTrap, badMagnetTrapSprite));
         possibleTrapList.Add(new PlaceableObject("Stopwatch", "ZA WARUDO!!!!", stopwatchTrap, stopwatchTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Stopwatch", "ZA WARUDO!!!!", badStopwatchTrap, badStopwatchTrapSprite));
         possibleTrapList.Add(new PlaceableObject("UFO", "The truth is out there", ufoTrap, ufoTrapSprite));
+        possibleTrapList.Add(new PlaceableObject("Chest", "What gachapon debauchery is this?", goodChest, goodChestSprite));
+        possibleTrapList.Add(new PlaceableObject("Chest", "What gachapon debauchery is this?", badChest, badChestSprite));
 
 
     }

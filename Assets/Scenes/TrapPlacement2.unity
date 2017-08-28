@@ -11188,7 +11188,7 @@ MonoBehaviour:
   knifeTrapSprite: {fileID: 21300000, guid: 976618d3e44289541b170d695b2f3ace, type: 3}
   deathNoteTrap: {fileID: 1568007445833128, guid: 0fdfa778154ab7d4da3a6e9200a48b72,
     type: 2}
-  deathNoteTrapSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da,
+  deathNoteTrapSprite: {fileID: 21300000, guid: 0faf6f43eb21edb48a89813398173c80,
     type: 3}
   glassesTrap: {fileID: 1262373683054918, guid: 98c375cd16c18b44cb77b2625a5ac462,
     type: 2}
@@ -11214,10 +11214,10 @@ MonoBehaviour:
   ufoTrap: {fileID: 1408168114825076, guid: 4dbaf11608bdc624291844b29dde55d8, type: 2}
   ufoTrapSprite: {fileID: 21300000, guid: c7f2be5895bb3804c8ab42d8d89864bc, type: 3}
   toast: {fileID: 1067841857643640, guid: e41f19f2b28263b438d4dc7f2e648e86, type: 2}
-  toastSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
+  toastSprite: {fileID: 21300000, guid: 029098d652626e34bb92c52ba9255a72, type: 3}
   poisonToast: {fileID: 1074454110558812, guid: e5487ceede28a214eba58fbf64a292fa,
     type: 2}
-  poisonToastSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
+  poisonToastSprite: {fileID: 21300000, guid: 029098d652626e34bb92c52ba9255a72, type: 3}
 --- !u!1001 &913159299
 Prefab:
   m_ObjectHideFlags: 0

@@ -1570,7 +1570,7 @@ MonoBehaviour:
   acceleration: 1
   gravity: -10
   jumpVelocity: 10
-  trapStopAmtTime: 3
+  trapStopAmtTime: 1.5
   trapSpeedAmtTime: 1
   trapSlowAmtTime: 3
   slowedMaxVelocity: 5

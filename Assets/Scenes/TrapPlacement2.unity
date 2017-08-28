@@ -11192,7 +11192,7 @@ MonoBehaviour:
     type: 3}
   glassesTrap: {fileID: 1262373683054918, guid: 98c375cd16c18b44cb77b2625a5ac462,
     type: 2}
-  glassesTrapSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
+  glassesTrapSprite: {fileID: 21300000, guid: 8c4b1dbea4cff1944806b1fad1f7b381, type: 3}
   starTrap: {fileID: 1569003758620552, guid: e00989870cc7754478d012f42f2f1d70, type: 2}
   starTrapSprite: {fileID: 21300000, guid: c788901799476c74ea4f20580b4a699e, type: 3}
   pillowTrap: {fileID: 1308049853128916, guid: 6f72e9705ea88be4c8c55c6abf1836ab, type: 2}

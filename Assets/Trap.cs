@@ -15,14 +15,18 @@ public class Trap : MonoBehaviour {
         speed_up,
         move_player_forward,
         move_player_backward,
-        switch_space_buttons,
+        switch_jump_buttons,
         fight_for_mouse,
         press_random_button,
+        good,
         hide_screen,
+        kill,
         switch_positions,
+        freeze_other,
         freeze_self,
-        freeze_others,
         tentacle,
+        go_to_first_player,
+        go_to_last_player,
         finish
     }
 

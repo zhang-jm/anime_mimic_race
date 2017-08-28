@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 4047257560520282}
   - component: {fileID: 95904973528471616}
   - component: {fileID: 114579472764047936}
+  - component: {fileID: 114579579540580970}
+  - component: {fileID: 54548394617139994}
   m_Layer: 0
   m_Name: Stopwatch
   m_TagString: Untagged
@@ -181,6 +183,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1318125403989054}
   m_Mesh: {fileID: 4300000, guid: 7b6d5305ad4b05c4d812a5b78a4775d7, type: 3}
+--- !u!54 &54548394617139994
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567294829802492}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!95 &95904973528471616
 Animator:
   serializedVersion: 3
@@ -209,5 +226,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trapType: 0
+  trapType: 13
   wasHit: 0
+--- !u!114 &114579579540580970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567294829802492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe1e619234ad874eb897d55f7a8e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yThreshold: -4

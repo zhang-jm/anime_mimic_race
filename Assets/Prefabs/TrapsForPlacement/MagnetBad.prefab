@@ -9,49 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1262373683054918}
+  m_RootGameObject: {fileID: 1578780226746970}
   m_IsPrefabParent: 1
---- !u!1 &1262373683054918
+--- !u!1 &1578780226746970
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4964503438575408}
-  - component: {fileID: 33403114670471850}
-  - component: {fileID: 23969874600631468}
-  - component: {fileID: 95254439920863356}
-  - component: {fileID: 65995520761077698}
-  - component: {fileID: 54039912657880072}
-  - component: {fileID: 114382153506502468}
-  - component: {fileID: 114692329120215056}
+  - component: {fileID: 4675810844484432}
+  - component: {fileID: 33936375195114376}
+  - component: {fileID: 23811603443157968}
+  - component: {fileID: 95717358483317528}
+  - component: {fileID: 114684045119540984}
+  - component: {fileID: 114803552842626164}
+  - component: {fileID: 65257033742911166}
+  - component: {fileID: 54480102842993198}
   m_Layer: 0
-  m_Name: Glasses
+  m_Name: MagnetBad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4964503438575408
+--- !u!4 &4675810844484432
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -7.427625, y: -4.525589, z: 1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_GameObject: {fileID: 1578780226746970}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -16.678806, y: -1.6892378, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.05, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!23 &23969874600631468
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23811603443157968
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
+  m_GameObject: {fileID: 1578780226746970}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,8 +59,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 89e346aab8311ff489226ca83acfa310, type: 2}
-  - {fileID: 2100000, guid: 1776077354d94c84bad46160e65a374c, type: 2}
+  - {fileID: 2100000, guid: ed617d7c855de394c853f517bd5994ba, type: 2}
+  - {fileID: 2100000, guid: 875568e0e22fa5b4e889c1dace04d996, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,19 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33403114670471850
+--- !u!33 &33936375195114376
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
-  m_Mesh: {fileID: 4300000, guid: 7dd018038f74e5547b180e1b6330a152, type: 3}
---- !u!54 &54039912657880072
+  m_GameObject: {fileID: 1578780226746970}
+  m_Mesh: {fileID: 4300000, guid: 220c89ab4eb3ffe448a201254476e4a6, type: 3}
+--- !u!54 &54480102842993198
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
+  m_GameObject: {fileID: 1578780226746970}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -101,27 +101,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65995520761077698
+--- !u!65 &65257033742911166
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
+  m_GameObject: {fileID: 1578780226746970}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4979305, y: 0.5356469, z: 2.3324013}
-  m_Center: {x: -0.0056819916, y: 1.6419666, z: -0.06263375}
---- !u!95 &95254439920863356
+  m_Size: {x: 1.5980568, y: 0.42234123, z: 1.7317462}
+  m_Center: {x: 0.02605629, y: 0.023527682, z: -0.116499186}
+--- !u!95 &95717358483317528
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
+  m_GameObject: {fileID: 1578780226746970}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7dd018038f74e5547b180e1b6330a152, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 220c89ab4eb3ffe448a201254476e4a6, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -130,28 +130,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114382153506502468
+--- !u!114 &114684045119540984
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
+  m_GameObject: {fileID: 1578780226746970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapType: 18
+  wasHit: 0
+--- !u!114 &114803552842626164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578780226746970}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfe1e619234ad874eb897d55f7a8e7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   yThreshold: -4
---- !u!114 &114692329120215056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262373683054918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c3f321ab582c45b18d912fb5066ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trapType: 10
-  wasHit: 0

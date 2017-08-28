@@ -509,7 +509,6 @@ GameObject:
   - component: {fileID: 54141483774532598}
   - component: {fileID: 65719543322288966}
   - component: {fileID: 114494156850172208}
-  - component: {fileID: 114476370576880906}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -699,7 +698,6 @@ GameObject:
   - component: {fileID: 92032654599361904}
   - component: {fileID: 124294007463817878}
   - component: {fileID: 114155495963602538}
-  - component: {fileID: 114300922003212062}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1553,34 +1551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: eee922db182dc6343bb564ca7855eb8a, type: 2}
---- !u!114 &114300922003212062
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1887512850355376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: eee922db182dc6343bb564ca7855eb8a, type: 2}
---- !u!114 &114476370576880906
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690218529774554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fc1d13fff39074785d5c72a122ceb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pc: {fileID: 0}
-  showCanvasLength: 2
-  canvas2: {fileID: 0}
-  canvas3: {fileID: 0}
-  canvas4: {fileID: 0}
 --- !u!114 &114494156850172208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1608,7 +1578,7 @@ MonoBehaviour:
   jumpKey: 32
   boostTrail: {fileID: 198337870768067252}
   status: 5
-  effectResolver: {fileID: 114476370576880906}
+  effectResolver: {fileID: 0}
   controller: {fileID: 95581716458847432}
 --- !u!124 &124294007463817878
 Behaviour:

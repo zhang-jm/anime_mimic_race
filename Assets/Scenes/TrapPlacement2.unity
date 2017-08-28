@@ -11169,10 +11169,55 @@ MonoBehaviour:
     type: 2}
   tentacleFieldSprite: {fileID: 21300000, guid: 7c2ac9915821bbc4381b211cf6d131c7,
     type: 3}
-  goodChest: {fileID: 0}
-  goodChestSprite: {fileID: 0}
-  badChest: {fileID: 0}
-  badChestSprite: {fileID: 0}
+  goodChest: {fileID: 1217316946889512, guid: a6031c35392b5194dbdc3deb17a5f8d0, type: 2}
+  goodChestSprite: {fileID: 21300000, guid: 727332c209dad60408c8d9815f37568e, type: 3}
+  badChest: {fileID: 1642120704860030, guid: 9a7d901591e3c554d864b3bcadfcdb91, type: 2}
+  badChestSprite: {fileID: 21300000, guid: 727332c209dad60408c8d9815f37568e, type: 3}
+  spaghettiTrap: {fileID: 1196647962957006, guid: e83e1bf77d883fe45a83167b2cec2ff2,
+    type: 2}
+  spaghettiTrapSprite: {fileID: 21300000, guid: 2dc1a81a37dc281468081a9412b03937,
+    type: 3}
+  buttonTrap: {fileID: 1813745509535754, guid: f038e1d88420f56459b84baa275ccb50, type: 2}
+  buttonTrapSprite: {fileID: 21300000, guid: 9cf5a873ed7b29341998c20b5ead4365, type: 3}
+  coinTrap: {fileID: 1317139602892780, guid: e35757d532e5178488b681a298aea024, type: 2}
+  coinTrapSprite: {fileID: 21300000, guid: 7322de7d01ccb1c4e8c5544bd821cc41, type: 3}
+  badCoinTrap: {fileID: 1075868563386438, guid: f6858880f854356489dedae0006b3ef1,
+    type: 2}
+  badCoinTrapSprite: {fileID: 21300000, guid: 7322de7d01ccb1c4e8c5544bd821cc41, type: 3}
+  knifeTrap: {fileID: 1697251646583394, guid: b9d65d0e14cac8d49bcfcf5e438331e1, type: 2}
+  knifeTrapSprite: {fileID: 21300000, guid: 976618d3e44289541b170d695b2f3ace, type: 3}
+  deathNoteTrap: {fileID: 1568007445833128, guid: 0fdfa778154ab7d4da3a6e9200a48b72,
+    type: 2}
+  deathNoteTrapSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da,
+    type: 3}
+  glassesTrap: {fileID: 1262373683054918, guid: 98c375cd16c18b44cb77b2625a5ac462,
+    type: 2}
+  glassesTrapSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
+  starTrap: {fileID: 1569003758620552, guid: e00989870cc7754478d012f42f2f1d70, type: 2}
+  starTrapSprite: {fileID: 21300000, guid: c788901799476c74ea4f20580b4a699e, type: 3}
+  pillowTrap: {fileID: 1308049853128916, guid: 6f72e9705ea88be4c8c55c6abf1836ab, type: 2}
+  pillowTrapSprite: {fileID: 21300000, guid: b9fc0f22c9f702244a8ff105b9501887, type: 3}
+  magnetTrap: {fileID: 1664659085018130, guid: 9094bbc73809c1f418d0826cb29bda86, type: 2}
+  magnetTrapSprite: {fileID: 21300000, guid: 649d39a60315fd049a5782b858a2c800, type: 3}
+  badMagnetTrap: {fileID: 1578780226746970, guid: cb9601357d0281b489c99e2631b45fb8,
+    type: 2}
+  badMagnetTrapSprite: {fileID: 21300000, guid: 649d39a60315fd049a5782b858a2c800,
+    type: 3}
+  stopwatchTrap: {fileID: 1567294829802492, guid: 6a47185abb9e71a44ba2453c29306cff,
+    type: 2}
+  stopwatchTrapSprite: {fileID: 21300000, guid: fd10ebef98288d64796345f6927814d2,
+    type: 3}
+  badStopwatchTrap: {fileID: 1340392832340832, guid: a04be9531ff970049928a66e72589b6e,
+    type: 2}
+  badStopwatchTrapSprite: {fileID: 21300000, guid: fd10ebef98288d64796345f6927814d2,
+    type: 3}
+  ufoTrap: {fileID: 1408168114825076, guid: 4dbaf11608bdc624291844b29dde55d8, type: 2}
+  ufoTrapSprite: {fileID: 21300000, guid: c7f2be5895bb3804c8ab42d8d89864bc, type: 3}
+  toast: {fileID: 1067841857643640, guid: e41f19f2b28263b438d4dc7f2e648e86, type: 2}
+  toastSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
+  poisonToast: {fileID: 1074454110558812, guid: e5487ceede28a214eba58fbf64a292fa,
+    type: 2}
+  poisonToastSprite: {fileID: 21300000, guid: 1cc11fd40194d3e42be600c41532e0da, type: 3}
 --- !u!1001 &913159299
 Prefab:
   m_ObjectHideFlags: 0
@@ -19397,7 +19442,7 @@ MonoBehaviour:
   playerText2: {fileID: 687848015}
   startPlacement: {fileID: 1544083310}
   trapPlacementUI: {fileID: 503699045}
-  countdown: 2
+  countdown: 10
   placementCamera: {fileID: 747608742}
 --- !u!4 &1637477628
 Transform:
@@ -23145,8 +23190,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908584659}
-  m_LocalRotation: {x: -0.23037978, y: 0.6604702, z: 0.22424398, w: 0.6785418}
-  m_LocalPosition: {x: -5.125061, y: -26.595428, z: -1.1280117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 653.5175, y: -39.20484, z: -203.84215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114731608539762968}
   - component: {fileID: 114396759420299240}
   - component: {fileID: 65614265971726678}
+  - component: {fileID: 54907328838719196}
   m_Layer: 0
   m_Name: NinjaStar
   m_TagString: Untagged
@@ -85,6 +86,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1569003758620552}
   m_Mesh: {fileID: 4300000, guid: e9e3f0efebbb93c4fa95367db5764df2, type: 3}
+--- !u!54 &54907328838719196
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569003758620552}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65614265971726678
 BoxCollider:
   m_ObjectHideFlags: 1

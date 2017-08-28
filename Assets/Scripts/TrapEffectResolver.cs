@@ -63,6 +63,11 @@ public class TrapEffectResolver : MonoBehaviour {
             return;
         }
 
+        if(player == null)
+        {
+            return;
+        }
+
         Player thisPlayer = player.GetComponent<Player>();
 
         canvasToShow.SetActive(false);
@@ -78,9 +83,9 @@ public class TrapEffectResolver : MonoBehaviour {
                 thisPlayer.controller.SetTrigger("tripped");
                 break;
 
-            case Trap.TrapType.speed_up:
+            case Trap.TrapType.slow_player_fixed:
                 thisPlayer.resetStatusCounter();
-                thisPlayer.status = Player.Status.speedy;
+                thisPlayer.status = Player.Status.slowedForTime;
                 break;
 
             case Trap.TrapType.slow_player_dynamic:
@@ -88,26 +93,110 @@ public class TrapEffectResolver : MonoBehaviour {
                 thisPlayer.status = Player.Status.slowed;
                 break;
 
-            case Trap.TrapType.slow_player_fixed:
+            case Trap.TrapType.speed_up:
                 thisPlayer.resetStatusCounter();
-                thisPlayer.status = Player.Status.slowedForTime;
+                thisPlayer.status = Player.Status.speedy;
                 break;
 
-            case Trap.TrapType.tentacle:
-                if(t.wasHit == false)
-                {
-                    player.transform.position += new Vector3(10, 0, 0);
-                } else
-                {
-                    thisPlayer.resetStatusCounter();
-                    thisPlayer.status = Player.Status.slowed;
-                }
+            case Trap.TrapType.move_player_forward:
+                player.transform.position += new Vector3(10, 0, 0);
+                break;
+
+            case Trap.TrapType.move_player_backward:
+                player.transform.position -= new Vector3(10, 0, 0);
+                break;
+
+            case Trap.TrapType.switch_jump_buttons:
+                showingCanvas = true;
+                canvasToShow.SetActive(true);
+                setUpCanvas(Trap.TrapType.fight_for_mouse);
                 break;
 
             case Trap.TrapType.fight_for_mouse:
                 showingCanvas = true;
                 canvasToShow.SetActive(true);
                 setUpCanvas(Trap.TrapType.fight_for_mouse);
+                break;
+
+            case Trap.TrapType.press_random_button:
+                showingCanvas = true;
+                canvasToShow.SetActive(true);
+                setUpCanvas(Trap.TrapType.fight_for_mouse);
+                break;
+
+            case Trap.TrapType.good:
+                player.transform.position += new Vector3(10, 0, 0);
+                break;
+
+            case Trap.TrapType.hide_screen:
+                break;
+
+            case Trap.TrapType.kill:
+                if(temp != null)
+                {
+                    Destroy(temp);
+                }
+
+                temp = new GameObject();
+                temp.AddComponent<Trap>();
+                temp.GetComponent<Trap>().trapType = Trap.TrapType.stop_player;
+
+                GameObject firstPlayer = getFirstPlayer();
+                resolveEffect(firstPlayer, temp);
+                break;
+
+            case Trap.TrapType.switch_positions:
+                break;
+
+            case Trap.TrapType.freeze_other:
+                foreach(GameObject p in pc.players) {
+                    if(p != player)
+                    {
+                        if (temp != null)
+                        {
+                            Destroy(temp);
+                        }
+
+                        temp = new GameObject();
+                        temp.AddComponent<Trap>();
+                        temp.GetComponent<Trap>().trapType = Trap.TrapType.freeze_self;
+
+                        resolveEffect(p, temp);
+                    }
+                }
+                break;
+
+            case Trap.TrapType.freeze_self:
+                thisPlayer.resetStatusCounter();
+                thisPlayer.status = Player.Status.stopped;
+                break;
+
+            case Trap.TrapType.tentacle:
+                if (t.wasHit == false)
+                {
+                    player.transform.position += new Vector3(10, 0, 0);
+                }
+                else
+                {
+                    thisPlayer.resetStatusCounter();
+                    thisPlayer.status = Player.Status.slowed;
+                }
+                break;
+
+            case Trap.TrapType.go_to_first_player:
+                GameObject fp = getFirstPlayer();
+                if(fp != null)
+                {
+                    player.transform.position = fp.transform.position;
+                }
+                break;
+
+            case Trap.TrapType.go_to_last_player:
+                GameObject lp = getLastPlayer();
+                if (lp != null)
+                {
+                    player.transform.position = lp.transform.position;
+                }
                 break;
 
             case Trap.TrapType.finish:
@@ -188,5 +277,38 @@ public class TrapEffectResolver : MonoBehaviour {
     {
         Debug.Log(player + " click");
         resolveEffect(pc.players[player], temp);
+    }
+
+    private GameObject getFirstPlayer()
+    {
+        GameObject firstPlayer = null;
+        float largestX = 0;
+
+        foreach(GameObject player in pc.players) {
+            if(player.transform.position.x > largestX)
+            {
+                largestX = player.transform.position.x;
+                firstPlayer = player;
+            }
+        }
+
+        return firstPlayer;
+    }
+
+    private GameObject getLastPlayer()
+    {
+        GameObject lastPlayer = null;
+        float smallestX = 10000;
+
+        foreach (GameObject player in pc.players)
+        {
+            if (player.transform.position.x < smallestX)
+            {
+                smallestX = player.transform.position.x;
+                lastPlayer = player;
+            }
+        }
+
+        return lastPlayer;
     }
 }

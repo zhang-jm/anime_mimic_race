@@ -13,14 +13,16 @@ public class Timer : MonoBehaviour {
     public Canvas startPlacement;
     public Canvas trapPlacementUI;
 
-    public float countdown = 30.0f;
+    public float countdown = 2.0f;
 
     private GameManager gm;
     private bool placingTraps = false;
+    public Camera placementCamera;
 
 	// Use this for initialization
 	void Start () {
         gm = GameManager.Instance;
+        placementCamera.transform.Translate((850f/gm.playerCount) * (gm.playerPlacingTraps - 1), 0f, 0f);
         playerText2.text = "Player " + gm.playerPlacingTraps;
         playerText.text = "Player " + gm.playerPlacingTraps + " is placing traps.";
 	}
@@ -43,6 +45,7 @@ public class Timer : MonoBehaviour {
                 if (gm.placingObject == false)
                 {
                     gm.playerPlacingTraps++;
+                    
                     if (gm.playerPlacingTraps > gm.playerCount)
                     {
                         SceneManager.LoadScene(2);

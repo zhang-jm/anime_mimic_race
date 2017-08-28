@@ -9139,7 +9139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747608738}
   m_LocalRotation: {x: 0.2149632, y: -0.0032461002, z: -0.00026952245, w: 0.97661674}
-  m_LocalPosition: {x: 42.9, y: 26.02, z: -8.98}
+  m_LocalPosition: {x: 72.41, y: 26.02, z: -8.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19397,7 +19397,8 @@ MonoBehaviour:
   playerText2: {fileID: 687848015}
   startPlacement: {fileID: 1544083310}
   trapPlacementUI: {fileID: 503699045}
-  countdown: 30
+  countdown: 2
+  placementCamera: {fileID: 747608742}
 --- !u!4 &1637477628
 Transform:
   m_ObjectHideFlags: 0

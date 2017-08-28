@@ -19442,7 +19442,7 @@ MonoBehaviour:
   playerText2: {fileID: 687848015}
   startPlacement: {fileID: 1544083310}
   trapPlacementUI: {fileID: 503699045}
-  countdown: 30
+  countdown: 2
   placementCamera: {fileID: 747608742}
 --- !u!4 &1637477628
 Transform:

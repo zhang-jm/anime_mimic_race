@@ -54,7 +54,7 @@ public class TrapEffectResolver : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(showingCanvas)
+		if(showingCanvas && winner == null)
         {
             showCanvasTimer += Time.deltaTime;
 
@@ -338,8 +338,18 @@ public class TrapEffectResolver : MonoBehaviour {
                 break;
 
             case Trap.TrapType.finish:
-                thisPlayer.status = Player.Status.finished;
-                thisPlayer.setVelocityX(0);
+                winner = player;
+
+                foreach (GameObject play in pc.players)
+                {
+                    Player p = play.GetComponent<Player>();
+                    p.status = Player.Status.finished;
+                    p.setVelocityX(0);
+                }
+
+                setUpCanvas(Trap.TrapType.finish);
+                showingCanvas = true;
+                canvasToShow.SetActive(true);
                 break;
         }
 
@@ -565,28 +575,33 @@ public class TrapEffectResolver : MonoBehaviour {
                     canvasToShow.transform.Find("P2/Text").gameObject.GetComponent<Text>().text = ":(";
                 }
 
-                if (winner == pc.players[2])
+                if(pc.players.Count > 2)
                 {
-                    canvasToShow.transform.Find("P3/Text").gameObject.GetComponent<Text>().text = "Winner!";
+                    if (winner == pc.players[2])
+                    {
+                        canvasToShow.transform.Find("P3/Text").gameObject.GetComponent<Text>().text = "Winner!";
+                    }
+                    else
+                    {
+                        canvasToShow.transform.Find("P3/Text").gameObject.GetComponent<Text>().text = ":(";
+                    }
                 }
-                else
-                {
-                    canvasToShow.transform.Find("P3/Text").gameObject.GetComponent<Text>().text = ":(";
+               
+                if(pc.players.Count > 3) {
+                    if (winner == pc.players[3])
+                    {
+                        canvasToShow.transform.Find("P4/Text").gameObject.GetComponent<Text>().text = "Winner!";
+                    }
+                    else
+                    {
+                        canvasToShow.transform.Find("P4/Text").gameObject.GetComponent<Text>().text = ":(";
+                    }
                 }
-
-                if (winner == pc.players[3])
-                {
-                    canvasToShow.transform.Find("P4/Text").gameObject.GetComponent<Text>().text = "Winner!";
-                }
-                else
-                {
-                    canvasToShow.transform.Find("P4/Text").gameObject.GetComponent<Text>().text = ":(";
-                }
-
+               
                 canvasToShow.transform.Find("Button").gameObject.SetActive(false);
                 canvasToShow.transform.Find("Instructions").gameObject.SetActive(true);
 
-                canvasToShow.transform.Find("Instructions/Text").gameObject.GetComponent<Text>().text = "Your jump buttons have switched!";
+                canvasToShow.transform.Find("Instructions/Text").gameObject.GetComponent<Text>().text = "Congratulations!";
                 break;
 
         }

@@ -24,7 +24,8 @@ public class PlaceObjects : MonoBehaviour {
                 c.isTrigger = true;
             }
 
-            obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, 1.0f);
+            obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, 8.0f);
+            obj.transform.localScale= new Vector3(1f, 1f, 1f);
         }
 	}
 	

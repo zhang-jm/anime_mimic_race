@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
     public float speedyMaxVelocity = 20.0f;
 
     public KeyCode jumpKey;
+    public ParticleSystem boostTrail;
 
     private float velocityX = 0;
     private float velocityY = 0;
@@ -81,12 +82,15 @@ public class Player : MonoBehaviour {
 
             statusCounter += Time.deltaTime;
             controller.SetBool("speedy", true);
+            boostTrail.gameObject.SetActive(true);
+
             if (statusCounter >= trapSpeedAmtTime)
             {
                 statusCounter = 0;
                 velocityX = maxVelocity;
                 status = Status.normal;
                 controller.SetBool("speedy", false);
+                boostTrail.gameObject.SetActive(false);
             }
         }
 

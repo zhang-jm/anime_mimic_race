@@ -8,7 +8,7 @@ public class TrapEffectResolver : MonoBehaviour {
 
     private GameManager gm;
     public PlayerController pc;
-    public float showCanvasLength = 2.0f;
+    public float showCanvasLength = 3.0f;
 
     private GameObject canvasToShow;
     private bool showingCanvas = false;
